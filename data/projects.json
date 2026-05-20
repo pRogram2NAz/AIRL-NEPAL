@@ -1,0 +1,23 @@
+[
+  {
+    "title": "OptiWet: Smart Irrigation Network",
+    "tag": "IoT & Telemetry",
+    "image": "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?q=80&w=400&auto=format&fit=crop",
+    "summary": "Deploying low-cost localized telemetry nodes to measure soil moisture and optimize water allocation in rice fields.",
+    "link": "projects.html#"
+  },
+  {
+    "title": "GeoCrop: Satellite Agronomy",
+    "tag": "Earth Observation",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400&auto=format&fit=crop",
+    "summary": "Processing multi-spectral Sentinel-2 data to build automated NDVI classification and crop prediction engines.",
+    "link": "projects.html#"
+  },
+  {
+    "title": "PestScan Mobile",
+    "tag": "Deep Learning",
+    "image": "https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=400&auto=format&fit=crop",
+    "summary": "An optimized TensorFlow Lite mobile app that identifies regional crop pests and diseases instantly offline.",
+    "link": "projects.html#"
+  }
+]

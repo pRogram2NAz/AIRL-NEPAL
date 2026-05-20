@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Lalit",
+    "role": "Lead Agri-AI Researcher",
+    "image": "assets/images/lalit.jpg",
+    "bio": "Ph.D. in Smart Agriculture. Specializes in predictive ML models for crop disease forecasting."
+  },
+  {
+    "name": "Rupak Adhikari",
+    "role": "Developr",
+    "image": "assets/images/rupak.jpeg",
+    "bio": "hi"
+  }
+]

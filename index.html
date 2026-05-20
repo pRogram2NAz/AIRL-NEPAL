@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agri-Intelligence Research Lab (AIRL) Nepal</title>
+  <meta name="description" content="AIRL Nepal – Pioneering sustainable agricultural intelligence, deep learning diagnostic networks, and precision IoT farming across Nepalese terrains." />
+  <meta name="keywords" content="smart farming nepal, agricultural research lab, AI crop diagnostic, remote sensing sentinel data, pokhara smart agriculture" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <nav class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-leaf">🌱</span> AIRL Nepal
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin/login.html" class="admin-link">Admin</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop" alt="Smart Farm Terrains" class="hero-bg-img" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <span class="hero-label">Agri-Intelligence Research</span>
+      <h1>Precision farming strategies for dynamic terrains</h1>
+      <p class="hero-sub">Pioneering sustainable agronomy, open geodata modeling, and hardware systems tailored for smallholder farms across Nepal.</p>
+      <div class="hero-cta-row">
+        <a href="projects.html" class="btn btn-accent">Explore Research</a>
+        <a href="about.html" class="btn btn-outline-white">About the Lab</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS / FOCUS AREAS -->
+  <section class="highlights-section">
+    <div class="container">
+      <h2 class="section-heading text-center">Core Research Verticals</h2>
+      <p class="section-subheading text-center">We approach smart farming from three interconnected disciplines.</p>
+      
+      <div class="grid-3">
+        <div class="highlight-card fade-up">
+          <div class="highlight-icon">
+            <i data-lucide="cpu"></i>
+          </div>
+          <h3>IoT Telemetry Networks</h3>
+          <p>Designing low-cost telemetry nodes tracking soil temperature, humidity, and chemical values in real time.</p>
+        </div>
+
+        <div class="highlight-card fade-up delay-1">
+          <div class="highlight-icon">
+            <i data-lucide="satellite"></i>
+          </div>
+          <h3>Geodata Modeling</h3>
+          <p>Processing Sentinel and Landsat imagery to forecast yield fluctuations and track agricultural land changes.</p>
+        </div>
+
+        <div class="highlight-card fade-up delay-2">
+          <div class="highlight-icon">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <h3>Edge Diagnostic AI</h3>
+          <p>Deploying optimized deep neural networks directly to lightweight mobile applications for offline crop disease diagnostics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE TELEMETRY WIDGET -->
+  <section class="alt" style="padding: 5rem 0 3.5rem;">
+    <div class="container">
+      <div class="text-center mb-3">
+        <span class="hero-label" style="margin-bottom: 0.75rem;">Live Telemetry Analytics</span>
+        <h2 class="section-heading">Smart Agricultural Monitoring Stations</h2>
+        <p class="section-subheading" style="max-width: 620px; margin-left: auto; margin-right: auto;">Explore real‑time localized microclimate and telemetry indicators transmitted from automated nodes across Nepalese terrains.</p>
+      </div>
+
+      <div class="telemetry-card fade-up">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-bottom: 2rem; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span class="telemetry-pulse"></span>
+            <span style="font-size: 0.88rem; font-weight: 700; color: var(--clr-primary); text-transform: uppercase; letter-spacing: 0.8px;">Live Connection Active</span>
+          </div>
+          <div>
+            <label for="farmLocation" style="font-size: 0.82rem; font-weight: 700; color: var(--clr-muted); margin-right: 0.5rem;">Select Farm Station:</label>
+            <select id="farmLocation" class="form-control" style="display: inline-block; width: auto; font-size: 0.88rem; padding: 0.4rem 1.8rem 0.4rem 0.8rem;">
+              <option value="pokhara">Pokhara Rice Paddy Station</option>
+              <option value="kaski">Kaski Potato Farm Station</option>
+              <option value="mustang">Mustang Apple Orchard Station</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-3" style="gap: 1.5rem; margin-bottom: 2.25rem;">
+          <div class="telemetry-metric">
+            <p style="font-size: 0.78rem; font-weight: 700; color: var(--clr-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Soil Moisture</p>
+            <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--clr-primary-dark);" id="telemetryMoisture">--%</h3>
+            <p style="font-size: 0.82rem; color: var(--clr-muted); margin-top: 0.25rem;">Target range: 20% - 35%</p>
+          </div>
+          <div class="telemetry-metric">
+            <p style="font-size: 0.78rem; font-weight: 700; color: var(--clr-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Soil Temperature</p>
+            <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--clr-primary-dark);" id="telemetryTemp">--°C</h3>
+            <p style="font-size: 0.82rem; color: var(--clr-muted); margin-top: 0.25rem;">Optimal range: 18°C - 26°C</p>
+          </div>
+          <div class="telemetry-metric">
+            <p style="font-size: 0.78rem; font-weight: 700; color: var(--clr-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Nitrogen Level</p>
+            <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--clr-primary-dark);" id="telemetryNitrogen">-- mg/kg</h3>
+            <p style="font-size: 0.82rem; color: var(--clr-muted); margin-top: 0.25rem;">Optimal: > 140 mg/kg</p>
+          </div>
+          <div class="telemetry-metric">
+            <p style="font-size: 0.78rem; font-weight: 700; color: var(--clr-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Soil pH Index</p>
+            <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--clr-primary-dark);" id="telemetryPh">--</h3>
+            <p style="font-size: 0.82rem; color: var(--clr-muted); margin-top: 0.25rem;">Neutral range: 6.0 - 7.2</p>
+          </div>
+        </div>
+
+        <div style="background: hsla(141, 40%, 95%, 0.5); border: 1px solid var(--clr-border); border-radius: var(--radius); padding: 1.25rem; display: flex; align-items: flex-start; gap: 0.85rem;" id="telemetryAlertContainer">
+          <div style="background: var(--clr-primary); color: #fff; padding: 6px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <i data-lucide="shield-alert" style="width: 18px; height: 18px;"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 0.88rem; font-weight: 700; color: var(--clr-primary-dark); margin-bottom: 0.25rem;">AIRL Agri-AI Decision System Advisory</h4>
+            <p style="font-size: 0.84rem; color: var(--clr-text); line-height: 1.5;" id="telemetryAdvisory">Connecting telemetry sensors...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-value">12+</div>
+          <div class="stat-label">Scientific Papers</div>
+        </div>
+        <div>
+          <div class="stat-value">1,400+</div>
+          <div class="stat-label">Farmers Assisted</div>
+        </div>
+        <div>
+          <div class="stat-value">3+</div>
+          <div class="stat-label">Open Datasets</div>
+        </div>
+        <div>
+          <div class="stat-value">6+</div>
+          <div class="stat-label">Lab Researchers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT INSIGHTS (BLOG PREVIEWS) -->
+  <section class="alt">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+        <div>
+          <h2 class="section-heading" style="margin-bottom: 0;">Recent Laboratory Insights</h2>
+          <p class="section-subheading" style="margin-bottom: 0;">Stay up to date with our newest findings and reports.</p>
+        </div>
+        <a href="articles.html" class="btn btn-primary btn-sm" style="flex-shrink: 0;">View All Articles</a>
+      </div>
+
+      <div class="grid-3" id="homeArticlesRow">
+        <!-- Rendered via tiny script block to keep homepage extremely clean -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo" style="font-size: 1.3rem;"><span class="logo-leaf">🌱</span> AIRL Nepal</span>
+          <p>Innovating agriculture through smart intelligence and scientific excellence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Us</a>
+          <a href="projects.html">Research & Projects</a>
+          <a href="articles.html">News & Blog</a>
+          <a href="opportunities.html">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p style="font-size: 0.88rem; opacity: 0.8; margin-bottom: 0.5rem;">📍 Pokhara, Nepal</p>
+          <p style="font-size: 0.88rem; opacity: 0.8; margin-bottom: 0.5rem;">✉️ info@airl.org.np</p>
+          <p style="font-size: 0.88rem; opacity: 0.8;">📞 +977-61-550123</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Agri-Intelligence Research Lab (AIRL) Nepal. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/telemetry.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+
+      // Mini dynamic rendering for home page news previews
+      const homeRow = document.getElementById('homeArticlesRow');
+      if (homeRow) {
+        const renderHomeArticles = (articles) => {
+          homeRow.innerHTML = '';
+          const list = articles.slice(0, 3);
+          list.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card fade-up';
+            card.innerHTML = `
+              <img src="${article.image}" alt="" class="article-img" onerror="this.src='https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=400&auto=format&fit=crop';" />
+              <div class="article-body">
+                <p class="article-meta">${new Date(article.date).toLocaleDateString()}</p>
+                <h3 class="article-title">${article.title}</h3>
+                <p class="article-excerpt">${article.excerpt}</p>
+                <a href="articles.html" class="btn btn-primary btn-sm">Read Article</a>
+              </div>
+            `;
+            homeRow.appendChild(card);
+          });
+          lucide.createIcons();
+        };
+
+        // Check local storage priority cache first
+        const localArticles = localStorage.getItem('airl_articles');
+        if (localArticles) {
+          renderHomeArticles(JSON.parse(localArticles));
+        } else {
+          fetch('data/articles.json')
+            .then(res => res.json())
+            .then(data => {
+              localStorage.setItem('airl_articles', JSON.stringify(data));
+              renderHomeArticles(data);
+            })
+            .catch(() => {
+              // Fallback static structure
+              homeRow.innerHTML = `
+                <div class="article-card fade-up">
+                  <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=400&auto=format&fit=crop" class="article-img" />
+                  <div class="article-body">
+                    <p class="article-meta">May 15, 2026</p>
+                    <h3 class="article-title">How AI Optimizes Water Use in Rice Paddies</h3>
+                    <p class="article-excerpt">Analyzing our 6-month trial in Pokhara using telemetry data to reduce crop water requirements by up to 28% without affecting yield quality.</p>
+                    <a href="articles.html" class="btn btn-primary btn-sm">Read Article</a>
+                  </div>
+                </div>
+                <div class="article-card fade-up delay-1">
+                  <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?q=80&w=400&auto=format&fit=crop" class="article-img" />
+                  <div class="article-body">
+                    <p class="article-meta">April 20, 2026</p>
+                    <h3 class="article-title">Deploying Sentinel Imagery to Fight Blight</h3>
+                    <p class="article-excerpt">Scaling remote sensing analytics to provide regional warning systems for late blight in potato farms throughout the Kaski district.</p>
+                    <a href="articles.html" class="btn btn-primary btn-sm">Read Article</a>
+                  </div>
+                </div>
+              `;
+              lucide.createIcons();
+            });
+        }
+      }
+    });
+  </script>
+</body>
+</html>

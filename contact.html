@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – AIRL Nepal</title>
+  <meta name="description" content="Reach out to Agri-Intelligence Research Lab (AIRL) Nepal. Send us messages, inquiries, or job applications." />
+  <meta name="keywords" content="contact airl nepal, smart farming contact, research lab pokhara office location" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <nav class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-leaf">🌱</span> AIRL Nepal
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin/login.html" class="admin-link">Admin</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Let's collaborate! Send us your inquiries, applications, or questions.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <section class="alt">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Information Card -->
+        <div class="contact-info-card fade-up">
+          <h3>Get In Touch</h3>
+          <p class="card-text">We are eager to discuss potential partnerships, student enrollments, or open research topics.</p>
+          
+          <div class="contact-info-item" style="margin-top: 1.5rem;">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <strong>Our Location</strong>
+              <p style="font-size: 0.88rem; color: var(--clr-muted); margin-top: 0.2rem;">Agri-Intelligence Research Lab (AIRL) Nepal<br />Pokhara, Kaski, Nepal</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <i data-lucide="mail"></i>
+            <div>
+              <strong>Email Us</strong>
+              <p style="font-size: 0.88rem; color: var(--clr-muted); margin-top: 0.2rem;"><a href="mailto:info@airl.org.np">info@airl.org.np</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <i data-lucide="phone"></i>
+            <div>
+              <strong>Call Us</strong>
+              <p style="font-size: 0.88rem; color: var(--clr-muted); margin-top: 0.2rem;">+977-61-550123</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Form Card -->
+        <div class="contact-form-card fade-up delay-1">
+          <h3>Send a Message</h3>
+          
+          <form id="contactForm" novalidate style="margin-top: 1rem;">
+            <div class="form-group">
+              <label for="contactName">Full Name *</label>
+              <input type="text" id="contactName" class="form-control" placeholder="Enter your name" />
+              <div class="form-error hidden" id="nameError">Full name is required.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="name@domain.com" />
+              <div class="form-error hidden" id="emailError">Please enter a valid email address.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Subject / Inquired Position</label>
+              <input type="text" id="contactSubject" class="form-control" placeholder="How can we help?" />
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Your Message *</label>
+              <textarea id="contactMessage" class="form-control" rows="5" placeholder="Write details here..."></textarea>
+              <div class="form-error hidden" id="messageError">Message content is required.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Send Message <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+            </button>
+            
+            <div class="form-success hidden" id="successBanner">
+              <i data-lucide="check-circle" style="display: inline-block; vertical-align: middle; margin-right: 6px;"></i>
+              Thank you! Your message was mock-submitted successfully. We'll reply soon.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo" style="font-size: 1.3rem;"><span class="logo-leaf">🌱</span> AIRL Nepal</span>
+          <p>Innovating agriculture through smart intelligence and scientific excellence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Us</a>
+          <a href="projects.html">Research & Projects</a>
+          <a href="articles.html">News & Blog</a>
+          <a href="opportunities.html">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p style="font-size: 0.88rem; opacity: 0.8; margin-bottom: 0.5rem;">📍 Pokhara, Nepal</p>
+          <p style="font-size: 0.88rem; opacity: 0.8; margin-bottom: 0.5rem;">✉️ info@airl.org.np</p>
+          <p style="font-size: 0.88rem; opacity: 0.8;">📞 +977-61-550123</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Agri-Intelligence Research Lab (AIRL) Nepal. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
