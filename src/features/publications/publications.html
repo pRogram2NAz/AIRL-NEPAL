@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarly Publications – AIRL Nepal</title>
+  <meta name="description" content="Read peer-reviewed research papers, conference posters, and patents authored by AIRL Nepal scientists." />
+  <meta name="keywords" content="agricultural informatics publications, machine learning crop classification nepal, airl research output" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../shared/css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <nav class="container">
+      <a href="../home/index.html" class="logo">
+        <span class="logo-leaf">🌱</span> AIRL Nepal
+      </a>
+      <ul class="nav-links">
+        <li><a href="../home/index.html">Home</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../people/people.html">People</a></li>
+        <li><a href="../projects/projects.html">Projects</a></li>
+        <li><a href="../articles/articles.html">Articles</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="../opportunities/opportunities.html">Opportunities</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+        <li><a href="../admin/login.html" class="admin-link">Admin</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Publications</h1>
+      <p>Scientific publications, whitepapers, and dataset releases from our researchers</p>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS LIST -->
+  <section>
+    <div class="container">
+      <h2 class="section-heading">Indexed Journals & Proceedings</h2>
+      <p class="section-subheading">Our peer-reviewed research footprints at leading global AI and agronomy venues.</p>
+
+      <div class="pub-list">
+        <div class="pub-item fade-up">
+          <h3>OptiIrrigate: Deep Reinforcement Learning for Dynamic Irrigation Schedules in Smallholder Paddy Farms</h3>
+          <p class="pub-venue">IEEE Transactions on Agri-Food Electronics, 2025</p>
+          <p class="pub-authors">Authors: Sandesh Khanal, Anjana Adhikari, Bishal Thapa</p>
+          <div style="margin-top: 0.6rem;">
+            <button onclick="showPdfToast()" class="btn btn-primary btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">PDF</button>
+            <button onclick="copyBibtex('optiirrigate')" class="btn btn-outline-white btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem; border-color: var(--clr-primary); color: var(--clr-primary);">BibTeX</button>
+          </div>
+        </div>
+
+        <div class="pub-item fade-up delay-1">
+          <h3>Sentinel-2 Multi-Spectral Analysis for Winter Wheat Yield Prediction in Nepal's Mid-Hills</h3>
+          <p class="pub-venue">Journal of Earth Observation & Land Use, 2024</p>
+          <p class="pub-authors">Authors: Anjana Adhikari, Sita Ram Karki</p>
+          <div style="margin-top: 0.6rem;">
+            <button onclick="showPdfToast()" class="btn btn-primary btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">PDF</button>
+            <button onclick="copyBibtex('sentinel2')" class="btn btn-outline-white btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem; border-color: var(--clr-primary); color: var(--clr-primary);">BibTeX</button>
+          </div>
+        </div>
+
+        <div class="pub-item fade-up delay-2">
+          <h3>PestScan Mobile: Deep Plant Disease Detection on Edge Devices in Low-Resource Terrains</h3>
+          <p class="pub-venue">Proceedings of the International Conference on Smart Agriculture (ICSA), 2024</p>
+          <p class="pub-authors">Authors: Bishal Thapa, Sandesh Khanal</p>
+          <div style="margin-top: 0.6rem;">
+            <button onclick="showPdfToast()" class="btn btn-primary btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">PDF</button>
+            <button onclick="copyBibtex('pestscan')" class="btn btn-outline-white btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem; border-color: var(--clr-primary); color: var(--clr-primary);">BibTeX</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo" style="font-size: 1.3rem;"><span class="logo-leaf">🌱</span> AIRL Nepal</span>
+          <p>Innovating agriculture through smart intelligence and scientific excellence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="../about/about.html">About Us</a>
+          <a href="../projects/projects.html">Research & Projects</a>
+          <a href="../articles/articles.html">News & Blog</a>
+          <a href="../opportunities/opportunities.html">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p style="font-size: 0.88rem; opacity: 0.8; margin-bottom: 0.5rem;">📍 Pokhara, Nepal</p>
+          <p style="font-size: 0.88rem; opacity: 0.8; margin-bottom: 0.5rem;">✉️ info@airl.org.np</p>
+          <p style="font-size: 0.88rem; opacity: 0.8;">📞 +977-61-550123</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Agri-Intelligence Research Lab (AIRL) Nepal. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../home/main.js" defer></script>
+  <script>
+    lucide.createIcons();
+
+    // ── BibTeX database ───────────────────────────────────────
+    const bibtexDb = {
+      optiirrigate: `@article{khanal2025optiirrigate,
+  title     = {OptiIrrigate: Deep Reinforcement Learning for Dynamic Irrigation Schedules in Smallholder Paddy Farms},
+  author    = {Khanal, Sandesh and Adhikari, Anjana and Thapa, Bishal},
+  journal   = {IEEE Transactions on Agri-Food Electronics},
+  year      = {2025},
+  publisher = {IEEE},
+  note      = {AIRL Nepal}
+}`,
+      sentinel2: `@article{adhikari2024sentinel,
+  title     = {Sentinel-2 Multi-Spectral Analysis for Winter Wheat Yield Prediction in Nepal's Mid-Hills},
+  author    = {Adhikari, Anjana and Karki, Sita Ram},
+  journal   = {Journal of Earth Observation and Land Use},
+  year      = {2024},
+  note      = {AIRL Nepal}
+}`,
+      pestscan: `@inproceedings{thapa2024pestscan,
+  title     = {PestScan Mobile: Deep Plant Disease Detection on Edge Devices in Low-Resource Terrains},
+  author    = {Thapa, Bishal and Khanal, Sandesh},
+  booktitle = {Proceedings of the International Conference on Smart Agriculture (ICSA)},
+  year      = {2024},
+  note      = {AIRL Nepal}
+}`,
+    };
+
+    // ── Toast helper ──────────────────────────────────────────
+    function showToast(message, type = 'success') {
+      const existing = document.getElementById('pubToast');
+      if (existing) existing.remove();
+
+      const toast = document.createElement('div');
+      toast.id = 'pubToast';
+      toast.style.cssText = `
+        position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+        background: ${type === 'success' ? 'var(--clr-primary)' : '#b45309'};
+        color: #fff; padding: 0.85rem 1.4rem; border-radius: 0.75rem;
+        font-size: 0.88rem; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        display: flex; align-items: center; gap: 0.6rem;
+        animation: slideInToast 0.3s ease;
+      `;
+      toast.innerHTML = `<span>${type === 'success' ? '✅' : 'ℹ️'}</span> ${message}`;
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.style.opacity = '0'; toast.style.transition = 'opacity 0.4s'; setTimeout(() => toast.remove(), 400); }, 3000);
+    }
+
+    // ── PDF button ────────────────────────────────────────────
+    function showPdfToast() {
+      showToast('PDF coming soon. Contact us at info@airl.org.np to request a copy.', 'info');
+    }
+
+    // ── BibTeX copy ───────────────────────────────────────────
+    function copyBibtex(key) {
+      const text = bibtexDb[key];
+      if (!text) return;
+      navigator.clipboard.writeText(text)
+        .then(() => showToast('BibTeX citation copied to clipboard!'))
+        .catch(() => {
+          // Fallback for non-HTTPS
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          ta.remove();
+          showToast('BibTeX citation copied to clipboard!');
+        });
+    }
+  </script>
+  <style>
+    @keyframes slideInToast {
+      from { transform: translateY(20px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+  </style>
+</body>
+</html>

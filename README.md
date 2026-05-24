@@ -1,95 +1,224 @@
-# Agri-Intelligence Research Lab (AIRL) Nepal Website
+# 🌱 AIRL Nepal — Agri-Intelligence Research Lab Website
 
-A modern, highly professional, completely static website tailored for the **Agri-Intelligence Research Lab (AIRL) Nepal** in Pokhara. The system features dynamic databases loaded via lightweight JSON feeds and an advanced client-side Administration Panel allowing team and blog adjustments.
-
-## 🚀 Key Architectural Features
-- **100% Hostable on GitHub Pages:** Zero server side runtime requirements (Node.js, databases, PHP). Works straight out of the box on standard static host platforms.
-- **Dynamic Portfolios & Teams:** The team members panel (`people.html`), project gallery (`projects.html`), and blogs index (`articles.html`) are driven by lightweight JSON data stores (`data/*.json`).
-- **Advanced Administration Console:** An elegant Tailwind-styled dashboard (`admin/dashboard.html`) featuring secure credentials validation, reactive input validation, output visual modal previews, and down-stream JSON synchronization.
-- **Responsive Architecture:** Fully mobile-first custom CSS system with micro-animations.
+A full-stack research lab website for the **Agri-Intelligence Research Lab (AIRL) Nepal**, Pokhara. Features a vanilla HTML/CSS/JS frontend with a Node.js + Express backend using JSON file storage.
 
 ---
 
-## 📂 Code Directory Layout
+## 🏗️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Vanilla HTML5 + CSS3 + JavaScript (no framework) |
+| Backend | Node.js + Express.js |
+| Database | JSON files (`backend/data/`) — swappable to MongoDB |
+| Auth | JWT (jsonwebtoken + bcryptjs) |
+| Icons | Lucide Icons (CDN) |
+| Fonts | Inter (Google Fonts) |
+
+---
+
+## 📁 Project Structure
+
 ```
-airl-nepal/
+AIRL-Nepal/
 │
-├── index.html                   # Home Portal & dynamic highlights
-├── about.html                   # Lab details, Mission, and Core Values
-├── people.html                  # Dynamic Team listing with instant search filters
-├── projects.html                # Dyn-loaded Smart Farming research portfolios
-├── articles.html                # news index with dynamic detail popup modals
-├── publications.html            # Scholarly output, PDFs, BibTeX links
-├── opportunities.html           # Summer internships, PhD fellows, career openings
-├── contact.html                 # validations and pre-fill applications query hook
+├── index.html                        ← Root redirect → src/features/home/index.html
+├── README.md
+├── Map_Claude.md                     ← Internal project map for Claude sessions
 │
-├── data/
-│   ├── people.json              # Team members dynamic database
-│   ├── projects.json            # Research projects dynamic database
-│   └── articles.json            # Blog articles database
+├── src/
+│   ├── features/
+│   │   ├── home/         index.html, main.js
+│   │   ├── about/        about.html
+│   │   ├── people/       people.html, people.js, people.json (seed)
+│   │   ├── projects/     projects.html, projects.js, projects.json (seed)
+│   │   ├── articles/     articles.html, articles.js, articles.json (seed)
+│   │   ├── publications/ publications.html (static)
+│   │   ├── opportunities/ opportunities.html (static)
+│   │   ├── contact/      contact.html, contact.js
+│   │   ├── telemetry/    telemetry.js
+│   │   ├── diagnostics/  diagnostics.js
+│   │   └── admin/        login.html, dashboard.html, admin.js
+│   └── shared/
+│       └── css/style.css             ← Single global stylesheet
 │
-├── assets/
-│   ├── css/
-│   │   └── style.css            # Global CSS custom properties, grid layouts & resets
-│   ├── js/
-│   │   ├── main.js              # Header controls and Dynamic Footer setup
-│   │   ├── people.js            # Live search & data render loop for team
-│   │   ├── projects.js          # Dynamic portfolio engine
-│   │   ├── articles.js          # Dynamic blog reader & detail modal controller
-│   │   └── contact.js           # Query parameter filler & validated inputs
+├── public/
+│   └── images/
+│       ├── home.jpg
+│       ├── people/   (lalit.jpg, rupak.jpeg)
+│       └── blog/     (empty — add blog images here)
 │
-└── admin/
-    ├── login.html               # Administration portal authentication entry
-    ├── dashboard.html           # Tailwind CRUD manager controls panel
-    └── config.js                # Administrator credentials data store
+└── backend/
+    ├── server.js                     ← Express app entry point (port 5000)
+    ├── .env.example                  ← Copy to .env and fill in values
+    ├── generate-hash.js              ← Utility to hash your admin password
+    ├── seed.js                       ← One-time data import from src/ JSONs
+    ├── config/
+    │   └── db.js                     ← JSON file DB helpers
+    ├── middleware/
+    │   └── auth.js                   ← JWT verify middleware
+    ├── controllers/
+    │   ├── authController.js
+    │   ├── peopleController.js
+    │   ├── articlesController.js
+    │   ├── contactController.js
+    │   └── projectsController.js
+    ├── routes/
+    │   ├── auth.js
+    │   ├── people.js
+    │   ├── articles.js
+    │   ├── contact.js
+    │   └── projects.js
+    └── data/                         ← Live JSON database (created by seed.js)
+        ├── people.json
+        ├── articles.json
+        ├── projects.json
+        └── messages.json
 ```
 
 ---
 
-## 🛠️ Local Development & Running
-Because this website makes `fetch` calls to retrieve dynamic JSON databases (`data/*.json`), browsers will block requests if opened straight from a local file explorer (`file://`) due to CORS security rules.
+## 🚀 Backend Setup (First Time)
 
-To run locally, execute a simple local web server:
+### 1. Install dependencies
 
-### Option A: Using Python (Simplest)
-Open a terminal in the project folder and run:
+```bash
+cd backend
+npm install
+```
+
+### 2. Generate your admin password hash
+
+```bash
+node generate-hash.js yourChosenPassword
+```
+
+Copy the hash output — you'll need it in the next step.
+
+### 3. Create `.env` from the example
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and fill in:
+
+```env
+PORT=5000
+JWT_SECRET=some_very_long_random_string_here
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD_HASH=<paste hash from step 2>
+CORS_ORIGIN=http://localhost:5500
+NODE_ENV=development
+```
+
+### 4. Seed the database
+
+```bash
+node seed.js
+```
+
+This copies data from `src/features/*/**.json` into `backend/data/` with proper IDs.
+
+### 5. Start the backend
+
+```bash
+npm run dev
+```
+
+Backend runs at **http://localhost:5000**. Verify with:
+
+```
+GET http://localhost:5000/api/health
+→ { "status": "ok", ... }
+```
+
+---
+
+## 🌐 Running the Frontend
+
+The frontend makes `fetch` calls to the backend API, with fallback to local JSON seeds.
+Open it with a local static server (browsers block `file://` fetches):
+
+**Option A — VS Code Live Server**
+Right-click `index.html` → Open with Live Server (default port 5500).
+
+**Option B — Python**
 ```bash
 python -m http.server 8000
 ```
-Then visit `http://localhost:8000` in your web browser.
+Then visit `http://localhost:8000`.
 
-### Option B: Using Node.js / NPX
-If you have Node.js installed, run:
+**Option C — Node / npx**
 ```bash
 npx serve .
 ```
-Then open the provided local URL in your browser.
 
 ---
 
-## 🧑‍💻 Operating the Admin Dashboard
-The dashboard allows laboratory administrators to manage dynamic content (team members and news items) directly from a user-friendly browser interface without editing code.
+## 🔑 Admin Panel
 
-1. Navigate to `admin/login.html` (e.g. `http://localhost:8000/admin/login.html`).
-2. Log in using the standard credentials:
-   - **Username:** `admin`
-   - **Password:** `password123`
-3. Inside the Dashboard:
-   - **Manage Team Members:** Add new entries, update details, or delete current profiles.
-   - **Manage Articles:** Form validation keeps entries consistent. Click **Preview** to see how the HTML post renders inside a clean layout mock modal before saving.
-   - **Syncing Changes:** Since the dashboard runs on the client-side (static host), it cannot directly overwrite files on disk. Instead, click the **Download Updated JSONs** button at the top right of the dashboard.
-   - Replace your local `data/people.json` and `data/articles.json` files with the downloaded ones.
-   - Commit and push those changes to your repository!
+1. Go to `src/features/admin/login.html`
+2. Log in with the username/password you set in `.env`
+3. Dashboard features:
+   - **Manage Team** — Add, edit, delete people via `/api/people`
+   - **Manage Articles** — Full CRUD via `/api/articles`, with HTML preview
+   - **View Inbox** — Read/mark messages from `/api/contact`
 
 ---
 
-## 🌐 Deployment to GitHub Pages
+## 📡 API Reference
 
-1. **Create a GitHub Repository:** Upload the contents of this folder directly to a new repository (e.g., `airl-nepal`).
-2. **Configure Settings:**
-   - Go to your repository **Settings** tab.
-   - Under the sidebar menu, click **Pages**.
-   - Under **Build and deployment**, select **Deploy from a branch**.
-   - Choose your branch (e.g., `main` or `master`) and set the folder to `/ (root)`.
-   - Click **Save**.
-3. **Enjoy your live site:** In a few moments, GitHub will host your site live at `https://<your-username>.github.io/airl-nepal/`.
+All endpoints run on `http://localhost:5000`.
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| GET | `/api/health` | — | Server status |
+| POST | `/api/auth/login` | — | Login → `{token, expiresIn}` |
+| GET | `/api/auth/verify` | ✅ | Verify token |
+| GET | `/api/people` | — | List team members |
+| POST | `/api/people` | ✅ | Add member |
+| PUT | `/api/people/:id` | ✅ | Update member |
+| DELETE | `/api/people/:id` | ✅ | Delete member |
+| GET | `/api/articles` | — | List articles (`?tag=`) |
+| POST | `/api/articles` | ✅ | Add article |
+| PUT | `/api/articles/:id` | ✅ | Update article |
+| DELETE | `/api/articles/:id` | ✅ | Delete article |
+| POST | `/api/contact` | — | Submit contact message |
+| GET | `/api/contact` | ✅ | List messages |
+| PUT | `/api/contact/:id/read` | ✅ | Mark as read |
+| DELETE | `/api/contact/:id` | ✅ | Delete message |
+| GET | `/api/projects` | — | List projects |
+| GET | `/api/projects/:id` | — | Single project |
+| POST | `/api/projects` | ✅ | Add project |
+| PUT | `/api/projects/:id` | ✅ | Update project |
+| DELETE | `/api/projects/:id` | ✅ | Delete project |
+
+Protected routes require: `Authorization: Bearer <token>`
+
+---
+
+## 🖼️ Adding Images
+
+- **People photos** → `public/images/people/<filename.jpg>`
+  In `people.json` or the admin form, use just the filename (e.g. `sita.jpg`). The frontend resolves the full path automatically.
+- **Blog/article images** → `public/images/blog/<filename.jpg>` or any Unsplash URL.
+- **Project images** → Unsplash URLs recommended (no local files needed).
+
+---
+
+## ⚠️ Known Issues / Roadmap
+
+See `Map_Claude.md` for the full issue tracker. Key items:
+
+- CORS is currently restricted to `CORS_ORIGIN` in `.env` — update before deployment
+- Login endpoint has no rate limiting yet (brute-force risk)
+- No pagination on GET endpoints
+- No admin CRUD UI for Projects yet
+
+---
+
+## 📄 License
+
+Research and educational use. Contact AIRL Nepal for collaboration inquiries.
+**✉️ info@airl.org.np | 📍 Pokhara, Nepal**

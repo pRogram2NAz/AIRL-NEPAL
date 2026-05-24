@@ -1,0 +1,41 @@
+[
+  {
+    "id": "mphxinmya0we1",
+    "name": "Lalit",
+    "role": "Lead Agri-AI Researcher",
+    "bio": "Ph.D. in Smart Agriculture. Specialises in predictive ML models for crop disease forecasting.",
+    "image": "public/images/people/lalit.jpg",
+    "email": "",
+    "linkedin": "",
+    "order": 0,
+    "active": true,
+    "createdAt": "2026-05-23T05:49:51.274Z",
+    "updatedAt": "2026-05-23T05:49:51.275Z"
+  },
+  {
+    "id": "9b1eafb2-deb5-41cf-aa12-5d8a39e041ba",
+    "name": "Swastik Raj Pandit",
+    "role": "Developer",
+    "bio": "Full-stack developer building tools that bridge AI research and field-level agricultural applications.",
+    "image": "public/images/people/swastik.jpeg",
+    "email": "",
+    "linkedin": "",
+    "order": 0,
+    "active": true,
+    "createdAt": "2026-05-23T06:21:28.739Z",
+    "updatedAt": "2026-05-23T06:31:17.620Z"
+  },
+  {
+    "id": "mphxinmzis62l",
+    "name": "Rupak Adhikari",
+    "role": "Developer",
+    "bio": "Full-stack developer building tools that bridge AI research and field-level agricultural applications.",
+    "image": "public/images/people/rupak.jpeg",
+    "email": "",
+    "linkedin": "",
+    "order": 1,
+    "active": true,
+    "createdAt": "2026-05-23T05:49:51.275Z",
+    "updatedAt": "2026-05-23T05:49:51.275Z"
+  }
+]
